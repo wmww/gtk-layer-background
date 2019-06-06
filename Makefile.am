@@ -1,0 +1,2 @@
+SUBDIRS = src
+AM_LDFLAGS = -O3

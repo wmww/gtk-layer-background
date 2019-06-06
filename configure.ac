@@ -1,0 +1,20 @@
+AC_PREREQ([2.61])
+AC_INIT([gtk-layer-shell], [0.1], [wm@wmww.sh])
+AM_INIT_AUTOMAKE([-Wall foreign])
+
+AC_PROG_CC
+
+LT_PREREQ([2.2])
+LT_INIT([])
+
+PKG_CHECK_MODULES(GTK, [gtk+-3.0 >= 3.22])
+AC_SUBST(GTK_CFLAGS)
+AC_SUBST(GTK_LIBS)
+
+PKG_CHECK_MODULES(LAYER_SHELL, gtk-layer-shell-0)
+AC_SUBST(LAYER_SHELL_CFLAGS)
+AC_SUBST(LAYER_SHELL_LIBS)
+
+AC_CONFIG_FILES([Makefile src/Makefile])
+
+AC_OUTPUT
