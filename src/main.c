@@ -61,6 +61,7 @@ activate (GtkApplication* app, void *_data)
     gtk_layer_init_for_window (GTK_WINDOW (window));
     gtk_layer_set_namespace (GTK_WINDOW (window), "background");
     gtk_layer_set_layer (GTK_WINDOW (window), GTK_LAYER_SHELL_LAYER_BACKGROUND);
+    gtk_layer_set_exclusive_zone (GTK_WINDOW (window), -1);
     for (int i = 0; i < GTK_LAYER_SHELL_EDGE_ENTRY_NUMBER; i++) {
         gtk_layer_set_anchor (GTK_WINDOW (window), i, TRUE);
     }
